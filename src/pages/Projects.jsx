@@ -6,42 +6,11 @@ const PROJECTS = [
   {
     name: "Zenith Spa",
     tag: "FULL STACK",
+    image: "/images/projects/zenithspa.jpg",
     description: "A luxury mobile spa booking platform with a five-step booking flow, dynamic admin-managed services and therapists, and crypto and Zelle payment options.",
     stack: ["React", "Node.js", "MongoDB", "Cloudinary", "Tailwind CSS"],
-    liveUrl: "#",
-    repoUrl: "#",
-  },
-  {
-    name: "Otrace",
-    tag: "FULL STACK",
-    description: "A B2B pharmaceutical marketplace connecting African suppliers and pharmacies, featuring real-time search, URL-synced filters, and a distinctive perforated pharmacy label brand identity.",
-    stack: ["React", "Node.js", "MongoDB", "Express"],
-    liveUrl: "#",
-    repoUrl: "#",
-  },
-  {
-    name: "Oru Aka",
-    tag: "FULL STACK",
-    description: "A marketplace connecting skilled Nigerian tradespeople with clients across Enugu, Lagos, and Abuja. Includes phone OTP verification, real-time chat, tiered worker verification, and an admin panel.",
-    stack: ["MERN", "Socket.io", "Termii", "Cloudinary", "Tailwind CSS"],
-    liveUrl: "#",
-    repoUrl: "#",
-  },
-  {
-    name: "Kenebi Health",
-    tag: "FULL STACK",
-    description: "A doctor-patient booking and teleconsultation platform for Enugu State, with a full booking system and live video consultations.",
-    stack: ["Laravel", "React", "MySQL", "Agora.io"],
-    liveUrl: "#",
-    repoUrl: "#",
-  },
-  {
-    name: "PayFlow",
-    tag: "FULL STACK",
-    description: "A Nigerian fintech banking app with a fully mobile-first experience: dashboard, transfers, transactions, beneficiaries, notifications, and settings.",
-    stack: ["Laravel", "React", "TypeScript", "Tailwind CSS"],
-    liveUrl: "#",
-    repoUrl: "#",
+    liveUrl: "https://zenithspa.online",
+    repoUrl: "https://github.com/Tobyishiwu/zenith-spa",
   },
 ];
 
@@ -54,10 +23,12 @@ function ProjectCard({ project, index }) {
       transition={{ duration: 0.5, delay: index * 0.06 }}
       className="group rounded-3xl border border-white/10 bg-white/[0.02] overflow-hidden hover:border-white/20 transition-all duration-300"
     >
-      <div className="h-56 bg-gradient-to-br from-violet-600/20 to-violet-400/5 border-b border-white/5 flex items-center justify-center">
-        <span className="text-3xl font-black text-white/20 group-hover:text-white/40 transition-colors duration-300">
-          {project.name}
-        </span>
+      <div className="h-56 border-b border-white/5 overflow-hidden">
+        <img
+          src={project.image}
+          alt={project.name}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+        />
       </div>
       <div className="p-8">
         <p className="text-xs font-semibold text-violet-400 uppercase tracking-wider mb-2">
@@ -120,7 +91,8 @@ function Projects() {
             </h1>
             <p className="mt-6 text-lg text-gray-400 max-w-2xl">
               A selection of production platforms I have built end to end,
-              solving real problems for real users.
+              solving real problems for real users. More projects coming
+              soon.
             </p>
           </motion.div>
         </Container>

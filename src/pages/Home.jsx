@@ -22,26 +22,11 @@ const PROJECTS = [
   {
     name: "Zenith Spa",
     tag: "FULL STACK",
+    image: "/images/projects/zenithspa.jpg",
     description: "Luxury mobile spa booking platform with crypto and Zelle payments.",
     stack: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
-    liveUrl: "#",
-    repoUrl: "#",
-  },
-  {
-    name: "Otrace",
-    tag: "FULL STACK",
-    description: "B2B pharmaceutical marketplace connecting African suppliers and pharmacies.",
-    stack: ["React", "Node.js", "MongoDB", "Express"],
-    liveUrl: "#",
-    repoUrl: "#",
-  },
-  {
-    name: "Oru Aka",
-    tag: "FULL STACK",
-    description: "Marketplace connecting skilled Nigerian tradespeople with clients who need them.",
-    stack: ["MERN", "Socket.io", "Tailwind CSS", "JWT"],
-    liveUrl: "#",
-    repoUrl: "#",
+    liveUrl: "https://zenithspa.online",
+    repoUrl: "https://github.com/Tobyishiwu/zenith-spa",
   },
 ];
 
@@ -64,7 +49,7 @@ const PROCESS = [
   {
     icon: HiOutlineRocketLaunch,
     title: "Ship",
-    description: "Deploy, monitor, and support — the work isn't done until it's live and stable.",
+    description: "Deploy, monitor, and support, the work isn't done until it's live and stable.",
   },
 ];
 
@@ -184,15 +169,15 @@ function Home() {
               </h2>
               <p className="text-gray-400 max-w-2xl">
                 I'm a full stack engineer based in Nigeria, working across
-                MERN and Laravel to build production-ready platforms —
+                MERN and Laravel to build production-ready platforms,
                 spa booking, healthcare, tradesperson marketplaces, and
-                fintech — with a strong focus on how people actually use
+                fintech, with a strong focus on how people actually use
                 the web where I'm from.
               </p>
             </div>
             <div className="flex md:justify-end">
               <Button to="/about" variant="secondary" className="text-base px-7 py-3.5 w-fit">
-                More About Me →
+                More About Me
               </Button>
             </div>
           </div>
@@ -214,7 +199,7 @@ function Home() {
               to="/projects"
               className="hidden md:inline-block text-sm font-semibold text-white border border-white/10 rounded-full px-5 py-2.5 hover:bg-white/5 transition-colors duration-200"
             >
-              View All Projects →
+              View All Projects
             </NavLink>
           </div>
 
@@ -228,10 +213,12 @@ function Home() {
                 transition={{ duration: 0.5, delay: index * 0.08 }}
                 className="group rounded-3xl border border-white/10 bg-white/[0.02] overflow-hidden hover:border-white/20 transition-all duration-300"
               >
-                <div className="h-44 bg-gradient-to-br from-violet-600/20 to-violet-400/5 border-b border-white/5 flex items-center justify-center">
-                  <span className="text-2xl font-black text-white/20 group-hover:text-white/40 transition-colors duration-300">
-                    {project.name}
-                  </span>
+                <div className="h-44 border-b border-white/5 overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
                 <div className="p-6">
                   <p className="text-xs font-semibold text-violet-400 uppercase tracking-wider mb-2">
@@ -247,25 +234,24 @@ function Home() {
                     ))}
                   </div>
                   <div className="mt-6 flex items-center gap-3">
-  <a
-    href={project.liveUrl}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex-1 text-center text-sm font-semibold text-white bg-white/5 border border-white/10 rounded-full px-4 py-2.5 hover:bg-white/10 hover:border-white/20 transition-all duration-200"
-  >
-    Live Demo →
-  </a>
-
-  <a
-    href={project.repoUrl}
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label={`${project.name} GitHub repository`}
-    className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200"
-  >
-    <FaGithub className="w-4 h-4" />
-  </a>
-</div>
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 text-center text-sm font-semibold text-white bg-white/5 border border-white/10 rounded-full px-4 py-2.5 hover:bg-white/10 hover:border-white/20 transition-all duration-200"
+                    >
+                      Live Demo
+                    </a>
+                    <a
+                      href={project.repoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={project.name + " GitHub repository"}
+                      className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200"
+                    >
+                      <FaGithub className="w-4 h-4" />
+                    </a>
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -344,7 +330,7 @@ function Home() {
             </h2>
             <p className="mt-4 text-gray-400 max-w-xl mx-auto">
               Whether it's a booking platform, a marketplace, or a fintech
-              app — I'm ready to help you ship it.
+              app, I'm ready to help you ship it.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <Button
@@ -363,5 +349,3 @@ function Home() {
 }
 
 export default Home;
-
-

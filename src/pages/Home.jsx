@@ -9,6 +9,7 @@ import {
 import { HiOutlineLightBulb, HiOutlineCodeBracketSquare, HiOutlineRocketLaunch, HiOutlineWrenchScrewdriver } from "react-icons/hi2";
 import Container from "../components/ui/Container";
 import Button from "../components/ui/Button";
+import { getFeaturedProjects } from "../data/projects";
 
 const STATS = [
   { label: "Projects Completed", value: "10+" },
@@ -18,17 +19,7 @@ const STATS = [
   { label: "Remote Work Ready", value: "Global" },
 ];
 
-const PROJECTS = [
-  {
-    name: "Zenith Spa",
-    tag: "FULL STACK",
-    image: "/images/projects/zenithspa.jpg",
-    description: "Luxury mobile spa booking platform with crypto and Zelle payments.",
-    stack: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
-    liveUrl: "https://zenithspa.online",
-    repoUrl: "https://github.com/Tobyishiwu/zenith-spa",
-  },
-];
+const PROJECTS = getFeaturedProjects();
 
 const PROCESS = [
   {
@@ -225,7 +216,7 @@ function Home() {
                     {project.tag}
                   </p>
                   <h3 className="text-xl font-bold text-white">{project.name}</h3>
-                  <p className="mt-2 text-sm text-gray-400">{project.description}</p>
+                  <p className="mt-2 text-sm text-gray-400">{project.shortDescription}</p>
                   <div className="mt-4 flex flex-wrap gap-2">
                     {project.stack.map((tech) => (
                       <span key={tech} className="text-xs font-medium text-gray-400 bg-white/5 border border-white/10 rounded-full px-3 py-1">

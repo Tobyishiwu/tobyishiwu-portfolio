@@ -28,6 +28,27 @@ export const projects = [
     repoUrl: "https://github.com/Tobyishiwu/moveit",
     featured: true,
   },
+
+  {
+  name: "Oru Aka",
+  tag: "FULL STACK",
+  image: "/images/projects/oru-aka.jpg",
+  shortDescription:
+    "A marketplace that connects customers with trusted local skilled professionals.",
+  description:
+    "Oru Aka is a full-stack service marketplace that helps users quickly find and hire verified skilled workers such as electricians, plumbers, carpenters, tailors, and other tradespeople. The platform features location-based search, worker profiles, ratings and reviews, secure authentication, and a modern responsive interface built for seamless service discovery.",
+  stack: [
+    "React",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Tailwind CSS",
+    "JWT"
+  ],
+  liveUrl: "https://oru-aka.vercel.app",
+  repoUrl: "https://github.com/Tobyishiwu/oru-aka",
+  featured: true,
+},
   
 ];
 

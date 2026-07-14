@@ -227,6 +227,7 @@ function Contact() {
                 <div className="flex items-center gap-3">
                   {SOCIAL_LINKS.map((social) => (
                     
+                      <a
                       key={social.label}
                       href={social.href}
                       target="_blank"

@@ -13,7 +13,7 @@ const NAV_LINKS = [
   { label: "Contact", path: "/contact" },
 ];
 
-const CV_URL = "/toby-ishiwu-cv.pdf";
+const CV_URL = "/cv.pdf";
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -176,3 +176,4 @@ function Navbar() {
 }
 
 export default Navbar;
+

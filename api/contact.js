@@ -15,7 +15,7 @@ export default async function handler(req, res) {
 
   try {
     await resend.emails.send({
-      from: "MoveIt Portfolio <onboarding@resend.dev>",
+      from: "Toby Ishiwu Portfolio <onboarding@resend.dev>",
       to: "tobyishiwu@gmail.com",
       replyTo: email,
       subject: "New portfolio message from " + name,
@@ -32,3 +32,4 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Failed to send message" });
   }
 }
+

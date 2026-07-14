@@ -33,21 +33,36 @@ function Contact() {
     message: "",
   });
   const [status, setStatus] = useState("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     setStatus("submitting");
+    setErrorMessage("");
 
-    // No backend wired up yet.
-    // Replace this with a real API call, email service, or form handler.
-    setTimeout(() => {
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        const data = await response.json();
+        throw new Error(data.error || "Failed to send message");
+      }
+
       setStatus("sent");
-    }, 800);
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      setStatus("error");
+      setErrorMessage(error.message || "Something went wrong. Please try again.");
+    }
   };
 
   return (
@@ -146,9 +161,14 @@ function Contact() {
                 </Button>
 
                 {status === "sent" && (
-                  <p className="text-sm text-violet-400">
-                    Message captured. Note: this form is not yet connected
-                    to a backend or email service.
+                  <p className="text-sm text-green-400">
+                    Message sent! I'll get back to you soon.
+                  </p>
+                )}
+
+                {status === "error" && (
+                  <p className="text-sm text-red-400">
+                    {errorMessage}
                   </p>
                 )}
               </form>
@@ -175,7 +195,7 @@ function Contact() {
                       <div>
                         <p className="text-xs text-gray-500">{item.label}</p>
                         {item.href ? (
-                          <a
+                          
                             href={item.href}
                             className="text-sm text-white hover:text-violet-400 transition-colors duration-200"
                           >
@@ -188,6 +208,14 @@ function Contact() {
                     </div>
                   ))}
                 </div>
+
+                
+                  href="/cv.pdf"
+                  download
+                  className="mt-6 w-full inline-flex items-center justify-center gap-2 rounded-2xl bg-white/5 border border-white/10 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10 transition-colors duration-200"
+                >
+                  Download CV
+                </a>
               </div>
 
               <div className="rounded-3xl border border-white/10 bg-white/[0.02] p-8">
@@ -196,7 +224,7 @@ function Contact() {
                 </h3>
                 <div className="flex items-center gap-3">
                   {SOCIAL_LINKS.map((social) => (
-                    <a
+                    
                       key={social.label}
                       href={social.href}
                       target="_blank"

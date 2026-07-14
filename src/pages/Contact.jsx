@@ -196,6 +196,7 @@ function Contact() {
                         <p className="text-xs text-gray-500">{item.label}</p>
                         {item.href ? (
                           
+                          <a
                             href={item.href}
                             className="text-sm text-white hover:text-violet-400 transition-colors duration-200"
                           >

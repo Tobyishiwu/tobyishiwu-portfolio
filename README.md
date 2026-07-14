@@ -1,16 +1,90 @@
-# React + Vite
+# Toby Ishiwu Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my personal developer portfolio, built to showcase the projects I've worked on, the technologies I use, and my journey as a full-stack software developer.
 
-Currently, two official plugins are available:
+The portfolio highlights real-world applications I've built using modern web technologies and serves as a central place for recruiters, clients, and collaborators to learn more about me and my work.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Modern and responsive design
+- Featured projects with live demos and GitHub repositories
+- Skills and technology stack
+- About Me section
+- Contact section
+- Downloadable résumé
+- Smooth animations and transitions
+- SEO-friendly structure
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Tech Stack
+
+- React
+- Vite
+- Tailwind CSS
+- React Router
+- Framer Motion
+- React Icons
+
+---
+
+## 🚀 Getting Started
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Tobyishiwu/tobyishiwu-portfolio.git
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open your browser and visit:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 📁 Project Structure
+
+```text
+src/
+public/
+```
+
+---
+
+## 🚀 Live Demo
+
+**Portfolio:** https://tobyishiwu.tech
+
+---
+
+## 👨‍💻 About Me
+
+I'm **Toby Ishiwu**, a full-stack software developer passionate about building modern, scalable web applications that solve real-world problems. I enjoy creating clean user experiences, designing intuitive interfaces, and developing reliable backend systems with the MERN stack.
+
+---
+
+## 📬 Contact
+
+- Portfolio: https://tobyishiwu.tech
+- GitHub: https://github.com/Tobyishiwu
+- LinkedIn: https://linkedin.com/in/tobyishiwu
+
+---
+
+If you enjoyed exploring my work, feel free to ⭐ this repository or connect with me!
